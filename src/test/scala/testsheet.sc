@@ -28,5 +28,17 @@ println(greetStrings.apply(0))
 
 val numNames = Array("a","b","c")
 
+var oneTwoThree = List(1,2,3)
+val one = List(1)
+val ones = oneTwoThree ::: one
+2:: one
+one.::(2)
+val two = 1::2::3::Nil
+
+two:+5
+val six = 6::two
+six.reverse
+
+
 
 
