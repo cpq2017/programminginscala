@@ -14,5 +14,10 @@ def max(x:Int,y:Int):Int = {
   else  y
 }
 
+val args = List(1,2,3,4)
+args.foreach(println)
+
+for(arg <- args) println(arg)
+
 
 
