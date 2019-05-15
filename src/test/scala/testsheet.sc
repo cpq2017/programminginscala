@@ -19,5 +19,14 @@ args.foreach(println)
 
 for(arg <- args) println(arg)
 
+val greetStrings = new Array[String](3)
+greetStrings.update(0,"a")
+greetStrings.update(1,"b")
+greetStrings.update(2,"c")
+//greetStrings.update(3,"d")
+println(greetStrings.apply(0))
+
+val numNames = Array("a","b","c")
+
 
 
