@@ -39,6 +39,12 @@ two:+5
 val six = 6::two
 six.reverse
 
+val s= 'a
+
+val nm = s.name
+println(nm)
+
+
 
 
 
