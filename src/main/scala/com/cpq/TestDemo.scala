@@ -43,7 +43,14 @@ object TestDemo extends App {
   println(y.toString)
   val x = new Rational(1,2)
  println(y + x*x)
-  println(x * y)
+  println(s"${x/y}")
+  println(s"- ${y-x}")
+  println(x-1)
+
+  implicit def intToRational(x: Int) = new Rational(x)
+
+  println(2 * x)
+
 
 //  println(rational)
 //  println("max "+x.max(y))
