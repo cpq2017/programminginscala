@@ -39,9 +39,18 @@ object TestDemo extends App {
   }
   updateRecordByname(Symbol("mysym"),1)
 
-  val y = new Rational(3,3)
+  val y = new Rational(3,4)
   println(y.toString)
   val x = new Rational(1,2)
-  val rational: Rational = y.add(y)
-  println(rational)
+ println(y + x*x)
+  println(x * y)
+
+//  println(rational)
+//  println("max "+x.max(y))
+//  println("lesthan "+x.lessThan(y))
+//  val z = new Rational(5)
+//  private val rational = new Rational(66,42)
+//  println(rational)
+
+
 }
