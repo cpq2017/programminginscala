@@ -61,3 +61,7 @@ println(y.toString)
 val x = new Rational(1,2)
 val rational: Rational = y.add(x)
 
+//val max1: Rational = x.max(y)
+println(x.lessThan(y))
+
+
