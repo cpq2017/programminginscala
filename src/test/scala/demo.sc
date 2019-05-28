@@ -43,8 +43,4 @@ val s= 'a
 
 val nm = s.name
 println(nm)
-
-
-
-
-
+println(f"${math.Pi}%.5f")
