@@ -19,5 +19,25 @@ object TestDemo extends App {
 
   val name = "ABC"
   private val nameHashUpperCase = name.exists(_.isUpper)
+  private val accumulator = new ChecksumAccumulator
+  accumulator.add(127)
+  accumulator.add(127)
+  accumulator.add(127)
+  println(accumulator.checksum())
+
+  def time[T](f: => T) :T ={
+    val start = System.nanoTime()
+    val ret = f
+    val end = System.nanoTime()
+    println(s"Time taken :${(end - start ) /1000 / 1000} ms")
+    ret
+  }
+  println(time((5*1010101 -4)))
+
+  def updateRecordByname(r:Symbol,value:Any): Unit ={
+
+  }
+  updateRecordByname(Symbol("mysym"),1)
+
 
 }
