@@ -59,5 +59,8 @@ object TestDemo extends App {
 //  private val rational = new Rational(66,42)
 //  println(rational)
 
+  def f() :Int = try return  1 finally  return  2
+  def g() :Int = try 1 finally  2
+  println(s"f() = ${f()} ; g() = ${g()}")
 
 }
