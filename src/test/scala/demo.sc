@@ -1,3 +1,5 @@
+import com.cpq.Rational
+
 var a=1+2
 a * 3
 
@@ -44,3 +46,18 @@ val s= 'a
 val nm = s.name
 println(nm)
 println(f"${math.Pi}%.5f")
+
+val n = "hello, world"
+n.indexOf("o")
+n.indexOf("o",5)
+n indexOf "o"
+//class Rational(i: Int, i1: Int)
+
+val oneHalf = new Rational(1,2)
+new Rational(3,4)
+val y = new Rational(3,3)
+println(y.toString)
+
+val x = new Rational(1,2)
+val rational: Rational = y.add(x)
+

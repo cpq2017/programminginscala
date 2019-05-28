@@ -39,5 +39,9 @@ object TestDemo extends App {
   }
   updateRecordByname(Symbol("mysym"),1)
 
-
+  val y = new Rational(3,3)
+  println(y.toString)
+  val x = new Rational(1,2)
+  val rational: Rational = y.add(y)
+  println(rational)
 }
