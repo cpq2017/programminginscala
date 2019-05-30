@@ -474,17 +474,8 @@ java中是通过多个catch子句来捕获不同类型的异常，而在scala中
 ## 类型层级
 在scala中，所有的值都是有类型的，包括数值型值和函数，比java更加彻底地贯彻了万物皆对象的理念。因此，scala有一套自己的类型层级，如下图所示：
 
-[https://mmbiz.qpic.cn/mmbiz_png/cge06IdYQyfXRc97x4AHJiaGkVnlsd5qn0FoOhrWlA8BIJ5TFrIx6r5jC2BsPDKtC6BMDAia87b17eQZCQ11kQlg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1
-]()
-
-
 如图中所示，scala的顶级类是Any，下面包含两个子类，AnyVal和AnyRef，其中AnyVal是所有值类型的父类，其中包含一个特殊的值Unit；而AnyRef是所有引用类型的父类，所有java类型和非值类型的scala类型都是它的子类。其中，有两个比较特殊的底层子类型，一个是Null，它是所有引用类型的子类型，可以赋给任何引用类型变量；另一个是Nothing，它是所有类型的子类，因此既可以赋给引用类型变量，也可以赋给值类型变量。
-
-
-
-
-
-
+![avatar](https://mmbiz.qpic.cn/mmbiz_png/cge06IdYQyfXRc97x4AHJiaGkVnlsd5qn0FoOhrWlA8BIJ5TFrIx6r5jC2BsPDKtC6BMDAia87b17eQZCQ11kQlg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 基本数值类型转换
 
