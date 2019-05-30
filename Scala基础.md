@@ -473,33 +473,25 @@ java中是通过多个catch子句来捕获不同类型的异常，而在scala中
 
 ## 类型层级
 在scala中，所有的值都是有类型的，包括数值型值和函数，比java更加彻底地贯彻了万物皆对象的理念。因此，scala有一套自己的类型层级，如下图所示：
-
-如图中所示，scala的顶级类是Any，下面包含两个子类，AnyVal和AnyRef，其中AnyVal是所有值类型的父类，其中包含一个特殊的值Unit；而AnyRef是所有引用类型的父类，所有java类型和非值类型的scala类型都是它的子类。其中，有两个比较特殊的底层子类型，一个是Null，它是所有引用类型的子类型，可以赋给任何引用类型变量；另一个是Nothing，它是所有类型的子类，因此既可以赋给引用类型变量，也可以赋给值类型变量。
 ![avatar](https://mmbiz.qpic.cn/mmbiz_png/cge06IdYQyfXRc97x4AHJiaGkVnlsd5qn0FoOhrWlA8BIJ5TFrIx6r5jC2BsPDKtC6BMDAia87b17eQZCQ11kQlg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
-基本数值类型转换
+如图中所示，scala的顶级类是Any，下面包含两个子类，AnyVal和AnyRef，其中AnyVal是所有值类型的父类，其中包含一个特殊的值Unit；而AnyRef是所有引用类型的父类，所有java类型和非值类型的scala类型都是它的子类。其中，有两个比较特殊的底层子类型，一个是Null，它是所有引用类型的子类型，可以赋给任何引用类型变量；另一个是Nothing，它是所有类型的子类，因此既可以赋给引用类型变量，也可以赋给值类型变量。
 
-
+## 基本数值类型转换
 
 在scala中，通常会自动进行java和scala之间基本数值类型的转换，并不需要单独去处理。所以，在我们的感受中，通常java和scala的基本数据类型是可以无缝衔接的。但是，有一种情况是例外的，那就是当你引用第三方的java类库，而在它的代码中接收参数是Object类型，之后又对传入对象的实际数值类型做判断时，通常会失败报错。
 
-
-
 原因很简单，第三方java类库，使用java语言编写，它只认得java的类型。当接收参数为Object类型时，scala默认不会转换成java的数值类型，这样当判断对象的具体数值类型时，会出现不认识scala对象类型的异常。
 
-
-
 解决方案也很简单，只需要在传入第三方类库方法前，手动包装成java类型即可。以下是代码示例，本例演示了DBUtils类库传入scala类型时的处理，只展示了部分代码：
-
+```
 //由于java和scala中的类型短名称重名，为避免歧义，进行了重命名
 import java.lang.{Long => JLong, Double => JDouble}
 //conn为数据库连接，sql为要执行的SQL语句
 queryRunner.update(conn, sql, new JLong(1L), new JDouble(2.2))
+```
 
-
-总结
-
-
+## 总结
 
 本文结合实际工作经验，把scala中最常用到的一些知识点进行了梳理，要想成为一名初级大数据分析工程师，这些知识是必须要掌握的。但是，由于篇幅有限，有些知识点未能展开来详细讲解，需要大家自己再多花一些时间，去全面学习下。如果你正在准备面试，希望本文的梳理，可以帮到你。
 
@@ -509,10 +501,6 @@ queryRunner.update(conn, sql, new JLong(1L), new JDouble(2.2))
 
 
 参考文献：
-
-
-
 [1] 《Scala程序设计》第二版，作者：Dean Wampler, Alex Payne，王渊、陈明译
-
 [2]  Scala官方文档，网址：https://docs.scala-lang.org/tour/tour-of-scala.html
-
+[3]  微信公众号 大数据与人工智能，网址：https://mp.weixin.qq.com/s?__biz=MzI1NjM1ODEyMg==&mid=2247484139&idx=1&sn=b35c4ff07042eae33268ea131617a5eb&chksm=ea26a16edd512878ea14381633271433b306e395765ffb3dde26438d4b9e109d01f911653b45&mpshare=1&scene=1&srcid=&key=7df668bd28a20fce53302830697764a6753e03263549641a8725621e69e10b554344cb9f45fb8f4f7485b4315ed24ee3fe359d494ffd14d597dc46a55195063f2f53c8ee2c080320a9235d908917f427&ascene=1&uin=MTY3MTA5MTQzNA%3D%3D&devicetype=Windows+7&version=62060739&lang=zh_CN&pass_ticket=l5ACbj796JDTu%2FnIzqUG1Po4s43UHqlkSvwcp7kcBpyZMUKTbEeCukwCbXQtrpMQ
