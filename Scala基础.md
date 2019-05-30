@@ -502,5 +502,7 @@ queryRunner.update(conn, sql, new JLong(1L), new JDouble(2.2))
 
 参考文献：
 [1] 《Scala程序设计》第二版，作者：Dean Wampler, Alex Payne，王渊、陈明译
+
 [2]  Scala官方文档，网址：https://docs.scala-lang.org/tour/tour-of-scala.html
-[3]  微信公众号 大数据与人工智能，网址：https://mp.weixin.qq.com/s?__biz=MzI1NjM1ODEyMg==&mid=2247484139&idx=1&sn=b35c4ff07042eae33268ea131617a5eb&chksm=ea26a16edd512878ea14381633271433b306e395765ffb3dde26438d4b9e109d01f911653b45&mpshare=1&scene=1&srcid=&key=7df668bd28a20fce53302830697764a6753e03263549641a8725621e69e10b554344cb9f45fb8f4f7485b4315ed24ee3fe359d494ffd14d597dc46a55195063f2f53c8ee2c080320a9235d908917f427&ascene=1&uin=MTY3MTA5MTQzNA%3D%3D&devicetype=Windows+7&version=62060739&lang=zh_CN&pass_ticket=l5ACbj796JDTu%2FnIzqUG1Po4s43UHqlkSvwcp7kcBpyZMUKTbEeCukwCbXQtrpMQ
+
+[3]  微信公众号 大数据与人工智能，![avatar](https://mp.weixin.qq.com/mp/qrcode?scene=10000004&size=102&__biz=MzI1NjM1ODEyMg==&mid=2247484139&idx=1&sn=b35c4ff07042eae33268ea131617a5eb&send_time=)
