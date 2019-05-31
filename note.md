@@ -5,4 +5,10 @@ val x = new Rational(1,2)
   println(s"${x/y}")
   println(s"- ${y-x}")
   println(x-1)`
+  
+| A  | B  | C  | D  |
+|:---|:---|:---|:---|
+| a  | b  | c  | d  |
+
+
  

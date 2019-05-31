@@ -58,10 +58,19 @@ new Rational(3,4)
 val y = new Rational(3,3)
 println(y.toString)
 
-val x = new Rational(1,2)
-val rational: Rational = y.add(x)
-
+//val x = new Rational(1,2)
+//val rational: Rational = y.add(x)
 //val max1: Rational = x.max(y)
-println(x.lessThan(y))
+//println(x.lessThan(y))
+
+val increase = (x:Int) => x+1
+increase(10)
+increase(15)
+
+val f = (_: Int) + (_: Int)
+f(4,5)
+
+
+
 
 
