@@ -5,6 +5,7 @@ package com.cpq
   * @ Date: 2019/5/28 10:44
   * @ Description: 
   */
+
 class Rational(n: Int, d: Int) {
   require(d != 0)
   //前置条件
