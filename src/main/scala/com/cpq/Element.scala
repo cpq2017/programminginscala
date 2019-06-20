@@ -2,6 +2,37 @@ package com.cpq
 
 import Element.elem
 
+
+
+object Element {
+
+  private class ArrayElement(val contents: Array[String]) extends Element
+
+  private class UniformElement(ch: Char, override val width: Int,
+                               override val height: Int) extends
+    Element {
+    private val line = ch.toString * width
+    override def contents: Array[String] = Array.fill(height)(line)
+  }
+
+  private class LineElement(s: String) extends Element {
+    override val contents: Array[String] = Array(s)
+    override def width: Int = s.length
+    override def height: Int = 1
+  }
+
+  def elem(contentes: Array[String]): Element = {
+    new ArrayElement(contentes)
+  }
+
+  def elem(chr: Char, width: Int, height: Int): Element = {
+    new UniformElement(chr, width, height)
+  }
+
+  def elem(line: String): Element = {
+    new LineElement(line)
+  }
+}
 abstract class Element {
   def contents: Array[String]
 
@@ -12,7 +43,7 @@ abstract class Element {
   def above(that: Element): Element = {
     val this1 = this widen that.width
     val that1 = that widen this.width
-
+    //    assert(this1.width == that1.width)
     elem(this1.contents ++ that1.contents)
   }
 
@@ -37,6 +68,7 @@ abstract class Element {
       val right = elem(' ',w-width - left.width,height)
       left beside this beside right
     }
+    //    ensuring(w <= _.width)
 
   }
 
@@ -51,32 +83,4 @@ abstract class Element {
   }
 
   override def toString: String = contents mkString "\n"
-}
-
-object Element {
-
-  private class ArrayElement(val contents: Array[String]) extends Element
-
-  private class UniformElement(ch: Char, override val width: Int, override val height: Int) extends Element {
-    private val line = ch.toString * width
-    override def contents: Array[String] = Array.fill(height)(line)
-  }
-
-  private class LineElement(s: String) extends Element {
-    override val contents: Array[String] = Array(s)
-    override def width: Int = s.length
-    override def height: Int = 1
-  }
-
-  def elem(contentes: Array[String]): Element = {
-    new ArrayElement(contentes)
-  }
-
-  def elem(chr: Char, width: Int, height: Int): Element = {
-    new UniformElement(chr, width, height)
-  }
-
-  def elem(line: String): Element = {
-    new LineElement(line)
-  }
 }
