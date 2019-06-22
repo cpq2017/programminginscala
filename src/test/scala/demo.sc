@@ -69,8 +69,3 @@ increase(15)
 
 val f = (_: Int) + (_: Int)
 f(4,5)
-
-
-
-
-
